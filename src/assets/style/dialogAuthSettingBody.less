@@ -1,0 +1,64 @@
+@borderColor:#E5E5E5;
+@conHeight: 654px;
+.dialogAuthSettingBody{
+    div{
+        box-sizing: border-box;
+    }
+    .qwdialogToolbar{
+        height: 62px;
+        border-bottom: 1px solid @borderColor;
+        input{
+            border-radius: 0;
+        }
+        .r{
+            display: inline-block;
+            float: right;
+            .el-button{
+                width: 88px;
+                text-align: center;
+                border-radius: 0;
+            }
+        }
+    }
+    .qwcontentBox{
+        min-height: @conHeight;
+        margin-top: 24px;
+        .l{
+            float: left;
+            width: 248px;
+            min-height: @conHeight;
+            border: 1px solid @borderColor;
+            overflow: hidden;
+            padding-top:-15px;
+        }
+        .r{
+            min-height: @conHeight;
+            width: 1184px;
+            padding-left: 272px;
+            .settingbox{
+                width: 912px;
+                border: 1px solid @borderColor;
+                min-height: @conHeight;
+                padding: 20px;
+                ._title{
+                    line-height: 62px;
+                    font-size: 16px;
+                    color:#333;
+                }
+                .el-col{
+                    box-sizing: border-box;
+                }
+                .el-row{
+                    height: 62px;
+                }
+                .el-button, .el-input__inner{
+                    border-radius: 0;
+                }
+                .contrlBtn{
+                    float: right;
+                    margin-right: 80px;
+                }
+            }
+        }
+    }
+}

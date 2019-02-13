@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试编辑器</title>
+    <script src="http://cdn.bootcss.com/ace/1.2.4/ace.js"></script>
+    <script src="http://cdn.bootcss.com/ace/1.2.4/ext-language_tools.js"></script>
+    <script src="http://cdn.bootcss.com/ace/1.2.4/ext-old_ie.js"></script>
+    <script src="http://cdn.bootcss.com/ace/1.2.4/theme-monokai.js"></script>
+</head>
+<style>
+#compile-editor{
+    width: 600px;
+    height: 200px;
+}
+</style>
+<body>
+    <div class="" id="compile-editor-div">
+        <div id="compile-editor" name="" class=" form-control">
+            /**
+            * Created on: 2016年09月16日 10:52:56
+            * Author: Guest
+            * Copyright (c) 2016, tool.usta.wiki , All Rights Reserved.
+            */
+            #include &lt;stdio.h&gt;
+    
+            int main()
+            {
+            /* 我的第一个 C 程序 */
+            printf(&quot;Hello, World! \n&quot;);
+            return 0;
+            }
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function (e) {
+        ace.edit('compile-editor')
+    }
+</script>
+</html>

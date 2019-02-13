@@ -3,18 +3,25 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+/**
+ * @description ace组件需要引入此插件
+ */
+// const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
 
-
 module.exports = {
-  context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: ["babel-polyfill", "./src/main.js"]
   },
+// module.exports = {
+//   context: path.resolve(__dirname, '../'),
+//   entry: {
+//     app: './src/main.js'
+//   },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -78,5 +85,11 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }
+  },
+/**
+* @description ace组件需要引入此插件
+*/
+  // plugins:[
+  //   new MonacoWebpackPlugin()
+  // ]
 }

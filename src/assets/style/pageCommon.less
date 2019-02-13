@@ -1,0 +1,435 @@
+@mainBlue:#2A93FF;
+.qwCommonPage{    
+    box-sizing: border-box;
+    .qwscroll::-webkit-scrollbar {/*滚动条整体样式*/
+        width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+        height: 10px;
+    }
+    .qwscroll::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+        border-radius: 2px;
+        -webkit-box-shadow: inset 0 0 5px rgba(255,255,255,0.2);
+        background: #CCC;
+    }
+    .qwscroll::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        -webkit-box-shadow: inset 0 0 5px rgba(255,255,255,0.2);
+        border-radius: 2px;
+        background: #EEE;
+    }
+    div{
+         box-sizing: border-box;
+    }
+    .lTree{
+        width: 368px;
+        background: #FFF;
+        box-sizing: border-box;
+        padding: 32px 10px 10px 10px; 
+        float: left;
+        .treeBox{
+            width:348px;
+            overflow: scroll; 
+        }
+        .treeSelect{
+            width: 104px;
+            line-height: 32px;
+            box-sizing: border-box;
+            padding-bottom: 4px;
+            .el-input{
+                line-height: 32px;
+                height: 32px;
+                .el-select__caret,
+                .el-input__inner{
+                    line-height: 32px;
+                    height: 32px;
+                    box-sizing: border-box;
+                    border-radius: 2px;
+                }
+            }
+        }
+        .treesearch{
+            width: 200px;
+            height: 32px;
+            line-height: 32px;
+            margin-left: 10px;
+            .el-input__inner{
+                line-height: 32px;
+                height: 32px;
+                box-sizing: border-box;
+                border-radius: 2px 0 0 2px;
+                border-right: none;
+            }
+            .el-input-group__append{
+                line-height: 30px;
+                height: 30px;
+                box-sizing: border-box;
+                background: @mainBlue;
+                color: #FFF;
+                border-color: @mainBlue;
+                border-radius: 0px 2px 2px 0px;
+            }
+            .el-button{
+                line-height: 30px;
+                height: 30px;                
+                margin: 0;
+                box-sizing: border-box;
+                padding: 0;
+            
+            }
+        }
+        .el-tree{
+            margin-top: 10px;            
+            .el-icon-caret-right:before{
+                color: @mainBlue;
+            }
+            .el-tree-node__loading-icon{
+                margin-left: 10px;
+                float: left;
+                line-height: 56px;
+            }
+            .el-icon-caret-right,.el-icon-caret-top,.el-icon-loading{
+                display: inline-block;
+                width: 24px;
+                height: 56px;
+                line-height: 56px;
+                text-align: center;
+                color: @mainBlue;
+            }            
+            .el-tree-node__content{
+                height: 26px;
+                overflow: hidden;
+                line-height: 56px;
+                .custom-tree-node .el-button--text{
+                    display: none;
+                }
+                .curNode{
+                    color: #2A93FF;
+                }
+            }
+            .el-tree-node__content:hover{                
+                background-color:rgb(240, 239, 245);
+                .custom-tree-node .el-button--text{
+                    display: inline-block;
+                }
+            }            
+            .el-tree-node__expand-icon.el-icon-caret-right.is-leaf,.el-tree-node__expand-icon{
+                display: none;
+            }
+            .custom-tree-node {
+                display: block;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 14px;
+                line-height: 26px;
+                padding-right: 8px;
+                span{
+                    -webkit-touch-callout: none; /* iOS Safari */
+                    -webkit-user-select: none; /* Chrome/Safari/Opera */
+                    -khtml-user-select: none; /* Konqueror */
+                    -moz-user-select: none; /* Firefox */
+                    -ms-user-select: none; /* Internet Explorer/Edge */
+                    user-select: none; /* Non-prefixed version, currently not supported by any browser */
+                }
+                .nodeLabel{
+                    display: inline-block;
+                    width: 120px;
+                    line-height: 26px;
+                    word-wrap: nowrap;
+                    overflow: hidden;
+                    -o-transform: translateY(8px);
+                    -ms-transform: translateY(8px);
+                    -moz-transform: translateY(8px);
+                    -webkit-transform: translateY(8px);
+                    transform: translateY(8px);
+                }
+                .menusBox{
+                    float: right;
+                    -o-transform: translateY(8px);
+                    -ms-transform: translateY(8px);
+                    -moz-transform: translateY(8px);
+                    -webkit-transform: translateY(8px);
+                    transform: translateY(8px);
+
+                }
+                .el-button+.el-button{
+                    margin-left: 0;
+                    padding: 0;
+                }
+                .tree_after_icon{
+                    display: inline-block;
+                    width: 20px;
+                    height: auto;
+                    background: url("../../assets/img/tree/bg_icon.png") no-repeat;
+                    // background-size: 30px 30px;
+                    background-position: 7px -4px; 
+                    height: 22px;
+                    background-color:rgb(240, 239, 245);
+                }
+                .tree_after_icon.add{
+                     background-position: -2px -3px; 
+                }
+                .tree_after_icon.edit{
+                     background-position: -30px -3px; 
+                }
+                .tree_after_icon.del{
+                     background-position: -58px -3px; 
+                }                
+                .tree_after_icon.run{
+                     background-position: -86px -3px; 
+                }                
+                .tree_after_icon.stop{
+                    display: inline-block;
+                    // width: 20px;
+                    height: 22px;
+                    text-align: center;
+                    background: url("../../assets/img/tree/stop.png") no-repeat;
+                    background-position: 1px -3px; 
+                }
+                .tree_after_icon.see{
+                     background-position: -114px -3px; 
+                }
+                .el-input{
+                    width: auto;
+                    min-width: 80px;
+                }
+                .el-input__inner{
+                    height: 26px;
+                    line-height: 26px;
+                    border-radius: 0;       
+                    border: 1px solid #409EFF;
+                }
+                .el-input__inner:focus{
+                    border: 1px solid #409EFF;
+                }
+            }
+        }
+    }
+    .rbox{
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 392px;
+        .filterBlock{
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 32px 24px;
+            background: #FFF;
+            .l{
+                display: block;
+                float: left;
+                width: 109px;
+                box-sizing: border-box;
+                overflow: hidden;
+                height: 32px;
+                .fTitle{                    
+                    display: block;
+                    box-sizing: border-box;
+                    padding-right: 10px;
+                    font-size: 18px;
+                    color: #333;
+                    line-height: 32px;
+                    height: 32px;
+                    width: 100%;
+                    font-weight: bold;
+                }
+            }
+            .r{
+                width: 100%;
+                box-sizing: border-box;
+                padding-left: 109px;
+                padding-right: 80px;
+                position: relative;
+                .nodata{
+                    display: block;
+                    line-height: 32px;
+                    color: #999;
+                }
+                .showOrHide{
+                    position: absolute;
+                    right: 0px;
+                    top: 0;
+                }
+                .qwBtns .el-button.is-disabled,.el-button{
+                    border-radius: 0;
+                    cursor: pointer;
+                    padding: 0;
+                    min-width: 88px;
+                    text-align: center;
+                    line-height: 32px;
+                    height: 32px;
+                }
+                .qwBtns span{
+                    display: inline-block;
+                    padding: 0 10px;
+                    margin-bottom: 24px;
+                }
+                .qwBtns span{
+                    margin-right: 10px;
+                    
+                }
+            }
+            
+        }
+        .infoBlock{
+            margin-top: 24px;
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 24px;
+            background: #FFF;            
+            // 内容部分
+            .contentBox{
+                box-sizing: border-box;
+                .content.edit{
+                    width: 340px;
+                }
+                .content{
+                    padding-top: 60px;
+                    box-sizing: border-box;
+                    width: 266px;
+                    margin:0 auto;
+                    .row{
+                        font-size: 14px;
+                        line-height: 24px;
+                        margin-bottom: 20px;
+                        color: #666;
+                        display: block;
+                        width: 100%;
+                        .label{
+                            display: block;
+                            width: 80px;
+                            text-align: right;
+                            color: #666;
+                            font-size: 14px;
+                            float: left;
+                        }
+                        .label:after{
+                            content: "："
+                        }
+                        .val{
+                            color: #333;
+                            font-size: 14px;
+                            display: block;
+                            width: 100%;
+                            text-align: left;
+                            box-sizing: border-box;
+                            padding-left: 88px;
+                            line-height: 24px;
+                            .el-button{
+                                margin: 0;
+                                padding: 0 10px;                                
+                                line-height: 24px;
+                                height: 24px;
+                                border-radius: 3px;
+                                margin-right:10px; 
+                            }
+                            .el-button.open{
+                                border-color:#409EFF;
+                                color: #409EFF;
+                            }                            
+                            .el-button.close{
+                                border-color:#F6463B;
+                                color: #F6463B;
+                            }
+                        }
+                    }
+                }
+                .ctitle{
+                    font-size: 30px;
+                    text-align: center;
+                    line-height: 30px;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+    .clearFloat{
+        clear: both;
+    }
+    .qwToolbar{
+                box-sizing: border-box;
+                padding-bottom: 24px;
+                border-bottom: 1px solid #E5E5E5;
+                .l {
+                    .toobarSearch{
+                        transform: translateY(2px);
+                        width: 200px;
+                        margin-left: 10px;
+                        height: 32px;
+                        .el-input__inner{
+                            height: 32px;
+                            line-height: 32px;
+                            border-radius: 0;
+                            border-right-color: #409EFF; 
+                        }
+                        .el-input-group__append{
+                            border-radius: 0;
+                            color: #409EFF;
+                            width: 80px;
+                            border-color: #409EFF;
+                        }
+                        .el-button{
+                            padding: 0;
+                            height: 30px;
+                            padding: 0;
+                            width: 80px;
+                            text-align: center;
+                            line-height: 30px;
+                            background: #FFF;
+                            border-radius: 0;
+                        }
+                    }
+                    .qwToolGroup{
+                        height: 32px;
+                        border-radius: 0;
+                        .el-button{
+                            min-width: 88px;
+                            line-height: 32px;
+                            padding: 0 10px;
+                            font-size: 12px;
+                            color: #333;
+                            text-align: center;
+                            border-radius: 0;
+                        }
+                        .el-button.active{
+                            background: #409EFF;
+                            color: #FFF;
+                            border-color: #409EFF;
+                        }
+                    }
+                    // .qwBtnGroup{
+                    //    border:1px solid rgba(220,220,220,1);
+                    //    line-height: 32px;
+                    //    height: 32px;
+                    //    display: inline-block;
+                    // }
+                    // .qwBtn{
+                    //     display: inline-block;
+                    //     line-height: 32px;
+                    //     height: 32px;
+                    //     font-size: 12px;
+                    //     text-align: center;
+                    //     color: #333;
+                    //     width: 88px;
+                    //     cursor: pointer;
+                    // }
+                  
+                }
+                
+                .r{
+                    float: right;
+                    .el-button{
+                        padding: 0 10px;
+                        line-height: 32px;
+                        min-width: 88px;
+                        height: 32px;
+                        border-radius: 0;                        
+                        font-size: 12px;
+                        color: #333;
+                    }
+                    .el-button.active{
+                        background: #409EFF;
+                        color: #FFF;
+                        border-color: #409EFF;
+                    }
+                }
+            }
+}

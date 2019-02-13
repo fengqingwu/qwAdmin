@@ -1,0 +1,117 @@
+.qw_form_box{
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+         .el-checkbox+.el-checkbox ,.el-radio+.el-radio{
+            margin-left: auto;
+        }
+        .el-checkbox,.el-radio{
+            margin-right: 30px;
+        }
+        .el-radio:last-child,.el-checkbox:last-child{
+            margin-right: 0;
+        }
+        .el-form-item__error{
+            position: absolute;
+            bottom: -18px;            
+            line-height: 18px;
+            font-size: 10px;
+            left: 0px;
+            min-width: 100%;
+            white-space:nowrap; 
+            overflow:hidden;
+            text-overflow:ellipsis;
+            background: #FFF;
+            padding-top: 0;
+        }
+        .el-form-item__error:before{
+            padding-left: 8px;
+            font-family: element-icons!important;
+            speak: none;
+            top:0;
+            left: 8px;
+            font-style: normal;
+            font-weight: 400;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            vertical-align: baseline;
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+            content: "\E62E";
+        }
+        .el-form-item__label{
+            line-height: 32px;
+            height: 32px;
+        }
+        .el-form-item__content{
+            line-height: 32px;
+            min-height: 32px;
+        }
+        .el-input__inner{
+            line-height: 32px;
+            height: 32px;
+            border-radius: 2px;
+        }
+        .el-textarea__inner{
+            border-radius: 2px;
+        }
+        .el-input__icon{
+            line-height: 32px;
+            height: 32px;
+        }
+        .el-input-number.el-input-number--small{
+            .el-input-number__increase{
+                height: 30px;
+                line-height: 30px;
+                top: auto;
+                bottom: 1px;
+            }
+            .el-input-number__decrease{
+                height: 30px;
+                line-height: 30px;
+                top: 2px;
+                bottom: auto;
+            }
+        }    
+        .el-input-number.el-input-number--small.is-controls-right{
+            .el-input-number__increase{
+                height: 15px;
+                line-height: 15px;
+                top: 2px;
+                bottom: auto;
+            }
+            .el-input-number__decrease{
+                height: 16px;
+                line-height: 16px;
+                top: auto;
+                bottom: 1px;
+            }
+        }    
+
+
+         .el-date-editor.el-input{
+             width: 100%;
+         }
+         .el-input-number{
+             width: auto;
+         }
+         .el-badge{
+             margin-left: 20px;
+         }
+         .labelInfo .el-form-item__label{
+             line-height: 32px;
+         }
+         .labelInfoVal{
+             color: #333;
+             display: inline-block;
+             float: left;
+             line-height: 32px;
+            //  width: 100px;
+            // line-height: 1.6;
+             overflow: hidden;
+         }
+         [class*=el-col-]{
+             min-height: 56px;
+         } 
+    }    

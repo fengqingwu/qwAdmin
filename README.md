@@ -1,6 +1,6 @@
-# qwadmin
+# qw_admin
 
-> this is a project created by fengqingwu used build admin projects
+> a vue.js project created by fengqingwu used for admin
 
 ## Build Setup
 

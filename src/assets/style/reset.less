@@ -1,0 +1,224 @@
+//公共样式
+blockquote,
+body,
+button,
+center,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+td,
+textarea,
+th,
+tr,
+ul {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  min-width: 1280px;
+  max-height: 100vh;
+  background-color: #F0F2F5;
+}
+article,
+aside,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 12px;
+}
+img,
+input,
+select {
+  vertical-align: middle;
+}
+li,
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+//
+.effect {
+  position: relative;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect:after,
+.effect:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 0px;
+  left: 20px;
+  right: 20px;
+  border-radius: 100px/10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  z-index: -2;
+}
+
+//tab样式
+
+//  background: #EFF2F4;
+//  margin-left: 14px;
+
+//  margin-left: 16px;
+//  color: #A1A1A1;
+.el-tabs__nav-scroll {
+  overflow: hidden;
+  // background: #dee3e8;
+  height: 49px;
+  // background-color: #409eff;
+  // background-image: -webkit-gradient(
+  //   linear,
+  //   left top,
+  //   right top,
+  //   from(#4a8dd2),
+  //   to(#2acaff)
+  // );
+  // background-image: linear-gradient(to right, #4a8dd2, #2acaff);
+  position: relative;
+  border-radius: 4px 4px 0 0;
+}
+.el-tabs--border-card {
+  border: none;
+  box-shadow: none;
+}
+.el-tabs.el-tabs--top.el-tabs--border-card {
+  overflow-y: auto;
+  border-radius: 4px 4px 0 0;
+}
+.el-tabs__nav {
+  margin-left: 40px;
+  margin-top: 8px;
+  border-radius: 51px;
+}
+.el-tabs--bottom .el-tabs--left .el-tabs__item:last-child,
+.el-tabs--bottom .el-tabs--right .el-tabs__item:last-child,
+.el-tabs--bottom.el-tabs--border-card .el-tabs__item:last-child,
+.el-tabs--bottom.el-tabs--card .el-tabs__item:last-child,
+.el-tabs--top .el-tabs--left .el-tabs__item:last-child,
+.el-tabs--top .el-tabs--right .el-tabs__item:last-child,
+.el-tabs--top.el-tabs--border-card .el-tabs__item:last-child,
+.el-tabs--top.el-tabs--card .el-tabs__item:last-child {
+  border-radius: 4px 4px 0 0;
+  //   color: #000;
+}
+.el-tabs--border-card > .el-tabs__header .el-tabs__item.is-active {
+  border-radius: 4px 4px 0 0;
+  color: #000;
+  margin: 0 8px;
+}
+.el-tabs--border-card > .el-tabs__header .el-tabs__item {
+  background: #eff2f4;
+  margin: 0 8px !important;
+  color: #a1a1a1;
+  border-radius: 4px 4px 0 0;
+}
+.el-tabs--border-card>.el-tabs__header{
+  background-color: #DEE3E8 !important;
+  border-bottom: 1px solid #DEE3E8 !important;
+}
+.el-tabs__content {
+  height: 100%;
+  min-height: 680px;
+  border: 1px solid #dee3e8;
+  border-top: none;
+}
+.el-tabs--border-card
+  > .el-tabs__header
+  .el-tabs__item:not(.is-disabled):hover {
+  color: #000;
+}
+.el-tabs--border-card > .el-tabs__header .el-tabs__item:not(.is-active):hover {
+  color: #a1a1a1;
+}
+.myTable {
+  .el-input-number.is-without-controls .el-input__inner {
+    text-align: left;
+  }
+  .el-button--text:focus,
+  .el-button--text:hover {
+    color: #1d03b1;
+  }
+}
+.el-input-number .el-input__inner {
+  text-align: left;
+  // width:100%
+}
+.el-select.el-select--mini{
+  width:100%
+}
+// .el-form-item{
+//   height:36px;
+// }
+.el-tabs__nav-wrap {
+  overflow: hidden;
+  margin-bottom: -2px;
+  position: relative;
+}
+.el-table__body-wrapper {
+  overflow-y: auto;
+  min-height: 300px;
+}
+.poc-toast .el-table__body-wrapper {
+  max-height: 250px;
+  min-height: auto;
+  overflow-y: auto;
+}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track-piece{background-color:rgba(0,0,0,0.2);
+-webkit-border-radius:6px}
+::-webkit-scrollbar-thumb:vertical{height:5px;background-color:rgba(125,125,125,0.7);
+-webkit-border-radius:6px}
+::-webkit-scrollbar-thumb:horizontal{width:5px;background-color:rgba(125,125,125,0.7);-webkit-border-radius:6px}
